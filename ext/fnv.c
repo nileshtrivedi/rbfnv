@@ -35,45 +35,45 @@ static inline uint32_t fnv1a_32(const char *data, uint32_t len) {
  * FNV fast hashing algorithm in 64 bits.
  * @see http://en.wikipedia.org/wiki/Fowler_Noll_Vo_hash
  */
-static inline uint64_t fnv1_64(const char *data, uint32_t len) {
+static inline uint32_t fnv1_64(const char *data, uint32_t len) {
   uint64_t rv = 0xcbf29ce484222325UL;
   uint32_t i;
   for (i = 0; i < len; i++) {
     rv = (rv * PRIME64) ^ (unsigned char)data[i];
   }
-  return rv;
+  return (uint32_t)rv;
 }
 
 /**
  * FNV fast hashing algorithm in 64 bits, variant with operations reversed.
  * @see http://en.wikipedia.org/wiki/Fowler_Noll_Vo_hash
  */
-static inline uint64_t fnv1a_64(const char *data, uint32_t len) {
+static inline uint32_t fnv1a_64(const char *data, uint32_t len) {
   uint64_t rv = 0xcbf29ce484222325UL;
   uint32_t i;
   for (i = 0; i < len; i++) {
     rv = (rv ^ (unsigned char)data[i]) * PRIME64;
   }
-  return rv;
+  return (uint32_t)rv;
 }
 
 
 /* ----- ruby bindings ----- */
 
 static VALUE rbfnv_fnv1_32(VALUE self, VALUE data) {
-  return INT2FIX(fnv1_32(RSTRING(data)->ptr, RSTRING(data)->len));
+  return UINT2NUM(fnv1_32(RSTRING(data)->ptr, RSTRING(data)->len));
 }
 
 static VALUE rbfnv_fnv1a_32(VALUE self, VALUE data) {
-  return INT2FIX(fnv1a_32(RSTRING(data)->ptr, RSTRING(data)->len));
+  return UINT2NUM(fnv1a_32(RSTRING(data)->ptr, RSTRING(data)->len));
 }
 
 static VALUE rbfnv_fnv1_64(VALUE self, VALUE data) {
-  return INT2FIX(fnv1_64(RSTRING(data)->ptr, RSTRING(data)->len));
+  return UINT2NUM(fnv1_64(RSTRING(data)->ptr, RSTRING(data)->len));
 }
 
 static VALUE rbfnv_fnv1a_64(VALUE self, VALUE data) {
-  return INT2FIX(fnv1a_64(RSTRING(data)->ptr, RSTRING(data)->len));
+  return UINT2NUM(fnv1a_64(RSTRING(data)->ptr, RSTRING(data)->len));
 }
 
 
