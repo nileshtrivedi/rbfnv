@@ -1,6 +1,6 @@
 = rbfnv
 
-* http://github.com/nileshtrivedi/gupshup
+* http://github.com/nileshtrivedi/rbfnv
 
 == DESCRIPTION:
 
