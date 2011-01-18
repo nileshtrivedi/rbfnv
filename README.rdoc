@@ -21,4 +21,5 @@ FNV hash implementation in C
 == AUTHORS:
 
 robey[http://github.com/robey] - Initial implementaion
+
 nileshtrivedi[http://github.com/nileshtrivedi] - Fix for 64-bit hashes
