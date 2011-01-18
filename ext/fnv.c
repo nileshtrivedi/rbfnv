@@ -36,7 +36,7 @@ static inline uint32_t fnv1a_32(const char *data, uint32_t len) {
  * @see http://en.wikipedia.org/wiki/Fowler_Noll_Vo_hash
  */
 static inline uint64_t fnv1_64(const char *data, uint32_t len) {
-  uint64_t rv = 0xcbf29ce484222325UL;
+  uint64_t rv = 0xcbf29ce484222325ULL;
   uint32_t i;
   for (i = 0; i < len; i++) {
     rv = (rv * PRIME64) ^ (unsigned char)data[i];
@@ -49,7 +49,7 @@ static inline uint64_t fnv1_64(const char *data, uint32_t len) {
  * @see http://en.wikipedia.org/wiki/Fowler_Noll_Vo_hash
  */
 static inline uint64_t fnv1a_64(const char *data, uint32_t len) {
-  uint64_t rv = 0xcbf29ce484222325UL;
+  uint64_t rv = 0xcbf29ce484222325ULL;
   uint32_t i;
   for (i = 0; i < len; i++) {
     rv = (rv ^ (unsigned char)data[i]) * PRIME64;
