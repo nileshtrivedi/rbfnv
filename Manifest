@@ -1,5 +1,7 @@
 CHANGELOG
+Manifest
+README.rdoc
+Rakefile
 ext/extconf.rb
 ext/fnv.c
-Rakefile
-Manifest
+test/unit/fnv_test.rb

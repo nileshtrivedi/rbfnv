@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>File: README.rdoc</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href=".././rdoc-style.css" type="text/css" media="screen" />
+  <script type="text/javascript">
+  // <![CDATA[
+
+  function popupCode( url ) {
+    window.open(url, "Code", "resizable=yes,scrollbars=yes,toolbar=no,status=no,height=150,width=400")
+  }
+
+  function toggleCode( id ) {
+    if ( document.getElementById )
+      elem = document.getElementById( id );
+    else if ( document.all )
+      elem = eval( "document.all." + id );
+    else
+      return false;
+
+    elemStyle = elem.style;
+    
+    if ( elemStyle.display != "block" ) {
+      elemStyle.display = "block"
+    } else {
+      elemStyle.display = "none"
+    }
+
+    return true;
+  }
+  
+  // Make codeblocks hidden by default
+  document.writeln( "<style type=\"text/css\">div.method-source-code { display: none }</style>" )
+  
+  // ]]>
+  </script>
+
+</head>
+<body>
+
+
+
+  <div id="fileHeader">
+    <h1>README.rdoc</h1>
+    <table class="header-table">
+    <tr class="top-aligned-row">
+      <td><strong>Path:</strong></td>
+      <td>README.rdoc
+      </td>
+    </tr>
+    <tr class="top-aligned-row">
+      <td><strong>Last Update:</strong></td>
+      <td>Tue Jan 18 14:39:43 +0530 2011</td>
+    </tr>
+    </table>
+  </div>
+  <!-- banner header -->
+
+  <div id="bodyContent">
+
+
+
+  <div id="contextContent">
+
+    <div id="description">
+      <h1>rbfnv</h1>
+<ul>
+<li><a
+href="http://github.com/nileshtrivedi/gupshup">github.com/nileshtrivedi/gupshup</a>
+
+</li>
+</ul>
+<h2>DESCRIPTION:</h2>
+<p>
+FNV hash implementation in C
+</p>
+<h2>USAGE:</h2>
+<pre>
+  require 'rbfnv'
+  Rbfnv.fnv1_32(&quot;cat&quot;) # &gt; 983016379
+  Rbfnv.fnv1a_32(&quot;cat&quot;) # &gt; 108289031
+  Rbfnv.fnv1_64(&quot;cat&quot;) # &gt; 15624606792861450203
+  Rbfnv.fnv1a_64(&quot;cat&quot;) # &gt; 17718013163177550631
+</pre>
+<h2>INSTALL:</h2>
+<pre>
+  sudo gem install rbfnv
+</pre>
+<h2>AUTHORS:</h2>
+<p>
+<a href="http://github.com/robey">robey</a> - Initial implementaion <a
+href="http://github.com/nileshtrivedi">nileshtrivedi</a> - Fix for 64-bit
+hashes
+</p>
+
+    </div>
+
+
+   </div>
+
+
+  </div>
+
+
+    <!-- if includes -->
+
+    <div id="section">
+
+
+
+
+
+      
+
+
+    <!-- if method_list -->
+
+
+  </div>
+
+
+<div id="validator-badges">
+  <p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+</div>
+
+</body>
+</html>

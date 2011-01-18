@@ -1,4 +1,4 @@
 
-v1.0. it works.
+v0.2 - Fixed 64-bit hashes and pushed as gem on http://rubygems.org
 
-v0.9. experiment.
+v0.1 - Imported robey's implementation

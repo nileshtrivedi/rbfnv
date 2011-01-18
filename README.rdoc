@@ -1,0 +1,24 @@
+= rbfnv
+
+* http://github.com/nileshtrivedi/gupshup
+
+== DESCRIPTION:
+
+FNV hash implementation in C
+
+== USAGE:
+
+  require 'rbfnv'
+  Rbfnv.fnv1_32("cat") # > 983016379
+  Rbfnv.fnv1a_32("cat") # > 108289031
+  Rbfnv.fnv1_64("cat") # > 15624606792861450203
+  Rbfnv.fnv1a_64("cat") # > 17718013163177550631
+
+== INSTALL:
+
+  sudo gem install rbfnv
+
+== AUTHORS:
+
+robey[http://github.com/robey] - Initial implementaion
+nileshtrivedi[http://github.com/nileshtrivedi] - Fix for 64-bit hashes
