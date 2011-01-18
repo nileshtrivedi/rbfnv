@@ -2,7 +2,7 @@
 #include "ruby.h"
 
 #define PRIME32 16777619
-#define PRIME64 1099511628211UL
+#define PRIME64 1099511628211ULL
 
 
 /**
