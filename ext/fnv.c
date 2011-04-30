@@ -61,19 +61,19 @@ static inline uint64_t fnv1a_64(const char *data, uint32_t len) {
 /* ----- ruby bindings ----- */
 
 static VALUE rbfnv_fnv1_32(VALUE self, VALUE data) {
-  return UINT2NUM(fnv1_32(RSTRING(data)->ptr, RSTRING(data)->len));
+  return UINT2NUM(fnv1_32(RSTRING_PTR(data), RSTRING_LEN(data)));
 }
 
 static VALUE rbfnv_fnv1a_32(VALUE self, VALUE data) {
-  return UINT2NUM(fnv1a_32(RSTRING(data)->ptr, RSTRING(data)->len));
+  return UINT2NUM(fnv1a_32(RSTRING_PTR(data), RSTRING_LEN(data)));
 }
 
 static VALUE rbfnv_fnv1_64(VALUE self, VALUE data) {
-  return ULL2NUM(fnv1_64(RSTRING(data)->ptr, RSTRING(data)->len));
+  return ULL2NUM(fnv1_64(RSTRING_PTR(data), RSTRING_LEN(data)));
 }
 
 static VALUE rbfnv_fnv1a_64(VALUE self, VALUE data) {
-  return ULL2NUM(fnv1a_64(RSTRING(data)->ptr, RSTRING(data)->len));
+  return ULL2NUM(fnv1a_64(RSTRING_PTR(data), RSTRING_LEN(data)));
 }
 
 
